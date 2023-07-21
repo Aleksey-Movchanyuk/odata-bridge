@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "inDhNjdLfQqa6Kt/qbpTZWd5ajQPc4pemRMOzdu3ilFjPBEQCDOxfPRmv+QeB1F4ED3fgKOmf9frQknmHauneQ==",
+  "success": true,
+  "projectFilePath": "/Users/anymacstore/Documents/Projects/DataToGo_UK/repos/odata-bridge/odata-bridge.csproj",
+  "expectedPackageFiles": [
+    "/Users/anymacstore/.nuget/packages/microsoft.aspnetcore.odata/8.2.0/microsoft.aspnetcore.odata.8.2.0.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/microsoft.bcl.asyncinterfaces/5.0.0/microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/microsoft.odata.core/7.16.0/microsoft.odata.core.7.16.0.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/microsoft.odata.edm/7.16.0/microsoft.odata.edm.7.16.0.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/microsoft.odata.modelbuilder/1.0.9/microsoft.odata.modelbuilder.1.0.9.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/microsoft.spatial/7.16.0/microsoft.spatial.7.16.0.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/system.componentmodel.annotations/4.6.0/system.componentmodel.annotations.4.6.0.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/system.text.encodings.web/4.7.2/system.text.encodings.web.4.7.2.nupkg.sha512",
+    "/Users/anymacstore/.nuget/packages/system.text.json/4.6.0/system.text.json.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
