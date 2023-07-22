@@ -1,18 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.OData;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
 
-namespace odata_bridge
+using ODataBridge.Models;
+using ODataBridge.Data;
+
+
+namespace ODataBridge
 {
     public class Startup
     {
@@ -23,37 +18,38 @@ namespace odata_bridge
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
+            services.AddControllers().AddOData(opt =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "odata_bridge", Version = "v1" });
+                opt.AddRouteComponents("odata", GetEdmModel()).Count().Filter().Expand().Select().OrderBy().SetMaxTop(5);
+                opt.RouteOptions.EnableControllerNameCaseInsensitive = true;
             });
+
+            services.AddDbContext<MyDbContext>(options =>
+                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "odata_bridge v1"));
-            }
-
-            app.UseHttpsRedirection();
-
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private static IEdmModel GetEdmModel()
+        {
+            var odataBuilder = new ODataConventionModelBuilder();
+            odataBuilder.EntitySet<Period>("Periods");
+            odataBuilder.EntitySet<Product>("Products");
+            odataBuilder.EntitySet<Region>("Regions");
+            odataBuilder.EntitySet<Sales>("Sales");
+
+            return odataBuilder.GetEdmModel();
         }
     }
 }
