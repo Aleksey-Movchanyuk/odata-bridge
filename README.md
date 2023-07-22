@@ -11,7 +11,7 @@ You can learn more about the overall reference architecture and strategy in the 
 ## Prerequisites
 Before you can run this project, you'll need to have the following installed:
 
-- [.NET 5.0 SDK](https://dotnet.microsoft.com/download)
+- [.NET 7.0 SDK](https://dotnet.microsoft.com/download)
 - [Visual Studio Code](https://code.visualstudio.com/download)
 - [SQLite](https://sqlite.org/download.html)
 
