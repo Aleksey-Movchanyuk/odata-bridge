@@ -40,4 +40,4 @@ To run this project, you will need to have .NET 5.0 SDK, Visual Studio Code, and
 We welcome contributions to this project, whether in the form of issue reports, suggestions, or pull requests. Please read our [Contribution Guidelines](CONTRIBUTING.md) for more information.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
