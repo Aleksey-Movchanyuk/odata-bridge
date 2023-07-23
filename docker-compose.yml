@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  odata-bridge:
+    image: odata-bridge
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5050:5050"
