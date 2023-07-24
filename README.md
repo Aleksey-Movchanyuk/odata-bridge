@@ -4,7 +4,7 @@ This repository contains a sample C# project demonstrating the creation of an OD
 ## Project Description
 This project demonstrates how you can implement a secure OData service that allows cloud-based BI and ETL systems to access your local ERP data. The repository is part of a larger conversation on securely integrating your systems with cloud-based BI and ETL systems, focusing on the utilization of a demilitarized zone (DMZ) to deploy your data service.
 
-You can learn more about the overall reference architecture and strategy in the associated blog post: [Using OData for Secure and Scalable Integration with Cloud-Based BI and ETL Systems](https://medium.com/p/5be737c1b090).
+You can learn more about the overall reference architecture and strategy in the associated blog post: [Using OData for Secure and Scalable Integration with Cloud-Based BI and ETL Systems](https://medium.com/@alex_m_datatogo/using-odata-for-secure-and-scalable-integration-with-cloud-based-bi-and-etl-systems-5be737c1b090).
 
 ![Reference Architecture](./docs/reference-architecture.png)
 
